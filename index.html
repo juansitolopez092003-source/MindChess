@@ -41,6 +41,40 @@
       margin-top: 40px;
     }
   </style>
+  
+/* --- Animación para el botón (latido) --- */ 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+.animated-button {
+    animation: pulse 2.4s ease-in-out infinite;
+}
+
+.animated-button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 199, 92, 0.7);
+    transition: 0.2s ease;
+}
+
+/* --- Animación para el título principal --- */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title-animated {
+    animation: fadeUp 1.2s ease-out forwards;
+}
+</style>
 </head>
 <body>
 
