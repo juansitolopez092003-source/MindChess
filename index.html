@@ -58,11 +58,15 @@
     transition: 0.2s ease;
 }
 
-/* --- Animación para el título principal --- */
-@keyframes fadeUp {
+/* --- Animación para el título principal (más visible) --- */
+@keyframes fadeUpVisible {
     0% {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(40px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0);
     }
     100% {
         opacity: 1;
@@ -71,8 +75,10 @@
 }
 
 .title-animated {
-    animation: fadeUp 1.2s ease-out forwards;
+    opacity: 0; /* Para asegurar que empieza invisible */
+    animation: fadeUpVisible 1.6s ease-out forwards;
 }
+
 
 </style>
 </head>
